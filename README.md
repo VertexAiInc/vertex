@@ -37,13 +37,13 @@ Designed to deliver natural conversations, rapid responses and a clean modern in
 
 ### 🖥️ Desktop Experience
 
-<img src="img/pc_ui.png" width="900">
+<img src="img/Screenshot_20260604_094129_Acode.png" width="900">
 
 <br><br>
 
 ### 📱 Mobile Experience
 
-<img src="img/mob_ui.png" width="350">
+<img src="img/Screenshot_20260604_094108_Acode.png" width="350">
 
 </div>
 
