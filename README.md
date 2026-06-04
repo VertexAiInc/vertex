@@ -8,7 +8,7 @@
 
 <br>
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.4.0-blue?style=for-the-badge)
 ![Status](https://img.shields.io/badge/status-online-success?style=for-the-badge)
 ![Llama](https://img.shields.io/badge/Llama-3.3-orange?style=for-the-badge)
 ![Groq](https://img.shields.io/badge/Groq-Ultra%20Fast-red?style=for-the-badge)
