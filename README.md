@@ -100,10 +100,10 @@ Designed to deliver natural conversations, rapid responses and a clean modern in
 
 <div align="center">
 
-![Stars](https://img.shields.io/github/stars/YOUR_USERNAME/YOUR_REPO?style=for-the-badge)
-![Forks](https://img.shields.io/github/forks/YOUR_USERNAME/YOUR_REPO?style=for-the-badge)
-![Issues](https://img.shields.io/github/issues/YOUR_USERNAME/YOUR_REPO?style=for-the-badge)
-![Last Commit](https://img.shields.io/github/last-commit/YOUR_USERNAME/YOUR_REPO?style=for-the-badge)
+![Stars](https://img.shields.io/github/stars/vertexaiinc/vertex?style=for-the-badge)
+![Forks](https://img.shields.io/github/forks/vertexainc/vertex?style=for-the-badge)
+![Issues](https://img.shields.io/github/issues/vertexaiinc/vertex?style=for-the-badge)
+![Last Commit](https://img.shields.io/github/last-commit/vertexaiinc/vertex?style=for-the-badge)
 
 </div>
 
@@ -112,9 +112,9 @@ Designed to deliver natural conversations, rapid responses and a clean modern in
 ## 🚀 Quick Start
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+git clone https://github.com/vertexaiinc/vertex.git
 
-cd YOUR_REPO
+cd vertex
 
 npm install
 
@@ -139,25 +139,6 @@ npm run dev
 
 ---
 
-## 🌎 Community
-
-Join our growing community and stay updated with the latest Vertex releases.
-
-<div align="center">
-
-### Follow us
-
-<a href="SEU_LINK_INSTAGRAM">
-  <img src="https://skillicons.dev/icons?i=instagram" height="60">
-</a>
-
-<a href="SEU_LINK_DISCORD">
-  <img src="https://skillicons.dev/icons?i=discord" height="60">
-</a>
-
-</div>
-
----
 
 ## 📜 License
 
