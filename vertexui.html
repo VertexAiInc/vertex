@@ -395,9 +395,7 @@ body.is-mobile .code-header{padding:7px 12px}
 
 <script>
 
-const GROQ_API_KEY = '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';
-
-const GROQ = 'https://api.groq.com/openai/v1/chat/completions';
+const BACKEND = 'https://vertex-groq.ferreirajoao20122.workers.dev/';
 const MODEL = 'llama-3.3-70b-versatile';
 let chats = JSON.parse(localStorage.getItem('groq_chats') || '[]');
 let cid = null;
@@ -670,12 +668,18 @@ async function stream(c){
   scrollBottom();
 
   try{
-    const res = await fetch(GROQ, {
-      method:'POST',
-      headers:{'Content-Type':'application/json','Authorization':`Bearer ${GROQ_API_KEY}`},
-      body:JSON.stringify({model:MODEL, messages:msgs, max_tokens:maxTok, temperature:temp, stream:true}),
-      signal:abrt.signal
-    });
+    const res = await fetch(BACKEND, {
+  method:'POST',
+  headers:{'Content-Type':'application/json'},
+  body: JSON.stringify({
+    model: MODEL,
+    messages: msgs,
+    max_tokens: maxTok,
+    temperature: temp,
+    stream: true
+  }),
+  signal: abrt.signal
+});
 
     if(!res.ok){
       let errMsg = res.statusText;
