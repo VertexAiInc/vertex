@@ -676,7 +676,7 @@ async function stream(c){
     messages: msgs,
     max_tokens: maxTok,
     temperature: temp,
-    stream: false
+    stream: true
   }),
   signal: abrt.signal
 });
@@ -688,21 +688,9 @@ async function stream(c){
     }
 
     let full = '', totalTokens = 0;
-    const data = await res.json();
-
-const full = data.choices?.[0]?.message?.content || '';
-
-typDiv.remove();
-
-c.messages.push({
-  role:'assistant',
-  content: full,
-  time: Date.now()
-});
-
-saveChats();
-renderList();
-renderMessages();
+    const reader = res.body.getReader();
+    const dec = new TextDecoder();
+    typDiv.querySelector('.msg-body').innerHTML = `<div class="msg-header"><span class="msg-name">Vertex</span></div><div class="msg-content" id="sc"></div>`;
 
     while(true){
       const {done, value} = await reader.read();
