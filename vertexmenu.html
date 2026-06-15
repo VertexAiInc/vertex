@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Vertex AI — Início</title>
+    <style>
+        :root {
+            --bg: #0d0d0f;
+            --surface: #131316;
+            --text: #e8e8f0;
+            --text2: #9090a8;
+            --text3: #555568;
+            --accent: #7c6af7;
+            --accent2: #9d8fff;
+            --border: #2a2a32;
+            --font: 'DM Sans', system-ui, sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+        body { font-family: var(--font); background: var(--bg); color: var(--text); display: flex; flex-direction: column; min-height: 100vh; }
+
+        /* HEADER */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 1px solid var(--border); }
+        .logo { font-weight: 700; font-size: 1.25rem; }
+        .nav-links { display: flex; gap: 24px; }
+        .nav-links a { color: var(--text2); text-decoration: none; font-size: 0.9rem; transition: 0.2s; }
+        .nav-links a:hover { color: var(--text); }
+
+        /* MAIN */
+        main { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px 20px; }
+        h1 { font-size: 3.5rem; margin-bottom: 16px; line-height: 1.1; }
+        .subtitle { color: var(--text2); margin-bottom: 40px; font-size: 1.1rem; }
+        
+        .buttons { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+        .btn { display: flex; align-items: center; gap: 10px; padding: 14px 28px; border-radius: 12px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+        .btn-web { background: var(--accent); color: #fff; }
+        .btn-web:hover { background: var(--accent2); transform: translateY(-1px); }
+        .btn-apk { background: var(--surface); color: var(--text); border: 1px solid var(--border); }
+        .btn-apk:hover { border-color: var(--text2); background: #1a1a1f; }
+
+        /* INFO SECTION */
+        #info { padding: 80px 20px; text-align: center; border-top: 1px solid var(--border); }
+        #info h2 { margin-bottom: 25px; color: var(--accent); }
+        .credits { line-height: 1.8; color: var(--text2); }
+        .credits b { color: var(--text); }
+
+        /* AJUSTES MOBILE */
+        body.is-mobile h1 { font-size: 2rem; }
+        body.is-mobile .buttons { flex-direction: column; width: 100%; max-width: 300px; }
+
+        footer { padding: 24px; text-align: center; color: var(--text3); font-size: 0.8rem; border-top: 1px solid var(--border); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Vertex AI</div>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#info">Info</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Vertex AI: The next generation of AI</h1>
+        <p class="subtitle">A inteligência artificial que entende o seu contexto.</p>
+        
+        <div class="buttons">
+            <a href="http://vertexaiinc.github.io/vertex/vertexui.html" class="btn btn-web">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                Use on Web
+            </a>
+            <a href="SEU_LINK_DE_DOWNLOAD" class="btn btn-apk" target="_blank" rel="noopener noreferrer">
+                <svg width="20" height="20" viewBox="0 0 48 48" fill="currentColor"><path d="M40.1 27.6c0-1.2.9-2.1 2.1-2.1s2.1.9 2.1 2.1v9.3c0 1.2-.9 2.1-2.1 2.1s-2.1-.9-2.1-2.1v-9.3zM34.8 24.3l3.6-6.3c.3-.5.1-1.2-.4-1.5-.5-.3-1.2-.1-1.5.4l-3.8 6.6c-4.4-1.5-9.3-1.5-13.7 0L15.6 17c-.3-.5-1-.7-1.5-.4-.5.3-.7 1-.4 1.5l3.6 6.3c-7.3 3.6-11.6 10.1-11.6 17.5h39.7c0-7.3-4.3-13.9-11.6-17.5zM15 32.8c-1.3 0-2.3-1-2.3-2.3s1-2.3 2.3-2.3 2.3 1 2.3 2.3-1 2.3-2.3 2.3zm18.3 0c-1.3 0-2.3-1-2.3-2.3s1-2.3 2.3-2.3 2.3 1 2.3 2.3-1 2.3-2.3 2.3z"/></svg>
+                Download APK
+            </a>
+        </div>
+    </main>
+
+    <section id="info">
+        <h2>Vertex</h2>
+        <div class="credits">
+            <p>Created by:</p>
+            <p><b>J. P.</b> - Programmer and Designer</p>
+            <p><b>J.A</b> - Original Idea</p>
+            <p><b>P.S</b> - contributor</p>
+            <p><b>P.E</b> - contributor</p>
+            <p><b>S</b> - contributor</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Vertex AI. Todos os direitos reservados.
+    </footer>
+
+    <script>
+        function checkDevice() {
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+            if (isMobile) { document.body.classList.add('is-mobile'); }
+            else { document.body.classList.remove('is-mobile'); }
+        }
+        window.addEventListener('resize', checkDevice);
+        checkDevice();
+    </script>
+</body>
+</html>
