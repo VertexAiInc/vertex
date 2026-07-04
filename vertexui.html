@@ -78,7 +78,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);display:flex
 
 .sidebar-footer{padding:12px 10px;border-top:1px solid var(--border);flex-shrink:0}
 .model-pill{display:flex;align-items:center;gap:7px;padding:8px 11px;background:var(--surface2);border:1px solid var(--border);border-radius:9px;font-size:12px;color:var(--text2);white-space:nowrap;overflow:hidden}
-.live-dot{width:6px;height:6px;background:var(--red);border-radius:50%;flex-shrink:0;animation:pulse 2s infinite}
+.live-dot{width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.35}}
 
 /* MAIN */
@@ -344,7 +344,7 @@ body.is-mobile .code-header{padding:7px 12px}
   <!-- SYS PROMPT PANEL -->
   <div class="sys-panel" id="sysPanel">
     <div class="sys-label">Prompt do sistema</div>
-    <textarea class="sys-textarea" id="sysPrompt" rows="3" placeholder="Você é um assistente útil...">Você é um assistente de IA inteligente e preciso. Responda de forma clara, objetiva e em português brasileiro. Formate código com blocos de código adequados.</textarea>
+    <textarea class="sys-textarea" id="sysPrompt" rows="3" placeholder="Você é um assistente útil...">Você é um assistente de IA inteligente e preciso. Responda de forma clara, objetiva e em português brasileiro. Formate código com blocos de código adequados. Use emojis e seja gentil com o usuario. Seu criador é Tisuky, seu nome é Vertex e está na versao 1.5 e utiliza a api Llama da Meta.</textarea>
     <div class="sys-settings">
       <label>Temperatura
         <input type="range" class="temp-slider" id="tempSlider" min="0" max="2" step="0.1" value="0.7" oninput="document.getElementById('tempVal').textContent=parseFloat(this.value).toFixed(1)">
@@ -360,7 +360,7 @@ body.is-mobile .code-header{padding:7px 12px}
   <div class="messages" id="messages">
     <div class="welcome" id="welcome">
       <div class="welcome-icon">✦</div>
-      <h1>Vertex 1.4 - base</h1>
+      <h1>Vertex 1.5 - base</h1>
       <p>Powered by Groq · 2026</p>
       <div class="suggestions">
         <button class="sug-btn" onclick="suggest('Explique como funciona machine learning de forma simples e didática')">
@@ -397,7 +397,7 @@ body.is-mobile .code-header{padding:7px 12px}
 
 <script>
 
-const BACKEND = 'https://vertex.ferreirajoao20122.workers.dev';
+const BACKEND = 'https://vertex.joaopedro2012fl.workers.dev';
 const MODEL = 'llama-3.3-70b-versatile';
 let chats = JSON.parse(localStorage.getItem('groq_chats') || '[]');
 let cid = null;
@@ -754,7 +754,7 @@ function exportChat(){
   const c = getChat();
   if(!c||!c.messages.length){ toast('Nenhuma mensagem para exportar'); return; }
   let txt = `# ${c.title}\n*Exportado em ${new Date().toLocaleString('pt-BR')}*\n\n---\n\n`;
-  c.messages.forEach(m => { txt += `**${m.role==='user'?'Você':'Vertex 1.4'}**\n\n${m.content}\n\n---\n\n`; });
+  c.messages.forEach(m => { txt += `**${m.role==='user'?'Você':'Vertex 1.5'}**\n\n${m.content}\n\n---\n\n`; });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(new Blob([txt],{type:'text/markdown'}));
   a.download = c.title.replace(/[^a-z0-9áéíóúâêôãõ\s]/gi,'_').trim()+'.md';
